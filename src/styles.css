@@ -1,1 +1,128 @@
+*{
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Muli', sans-serif;
+  font-kerning: auto;
+}
+
+#photo-grid{
+  padding-left: 20x;
+  padding-right: 20px;
+}
+
+#photo-grid img{
+  height: 100%;
+  width: 100%;
+  transition: 0.65s ease;
+}
+
+#photo-grid img:hover{
+  box-shadow:  0 10px 40px 0 rgb(0, 0, 0, 0.5);
+  transition: 0.8s ease;
+}
+
+#photo{
+  padding-bottom: 24px;
+  margin-top: 50%;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 5px 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content{
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 85%;
+  max-width: 1200px;
+  border: none; 
+  background-color: transparent;
+}
+
+.my-slides{
+  text-align: center;
+}
+
+.landscape-img{
+  width: 85vh;
+}
+
+.close{
+  color: #FFF;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-display: 48px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.close:hover, .close:focus{
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  width: auto;
+  padding: 16px;
+  margin-top: 50%;
+  color: #FFF !important;
+  font-weight: bold;
+  font-size: 3em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next:hover, .prev:hover{
+  background-color: rgba(0,0,0,.8);
+}
+
+.container {
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .text-block {
+    box-align: center;
+    bottom: 300px;
+    border-radius: 5px;
+    height: auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.464);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    offset-block-start: -40em;
+  }
 /* You can add global styles to this file, and also import other style files */
+
+.text-overlay{
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+}
+
+.img-scale img{
+  width: 40%;
+  height: auto;
+}

@@ -2,13 +2,212 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TestApp</title>
+  <meta name="description" content="The California State University Northridge Permission Number System for Acccounting and Computer Science">
+  <title>CSUN SAPS</title>
   <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 </head>
 <body>
-  <app-root></app-root>
+
+  <!--Navbar BEGIN-->
+
+  <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/csun-logo.png" height="44" width="272">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <ion-icon name="menu"></ion-icon>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav mr-md-auto">
+        <a class="nav-item nav-link active" style="padding-right:2ex" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" style="padding-right:4ex" href="about.htm">About</a>
+        <a href="https://auth.csun.edu/cas/login?service=http%3A%2F%2Fcsunsaps.com%2Fsignin-cas%3Fstate%3DCfDJ8M_1SXcOgMBCumpj8nY5e1owWpojJHQugAgnuekJ8g9pDaDYdREhDR6rb0EDMKDBLD3WPagS1Uu_ElAYCsdRBC38oeHdIW_ZA6eXviDXz2LSoiZE3d_peadc7FShljnN_BKiktHLPDND9oobv4h40WRUiwvjOFCWBgjSWpb5I-wx9Q3lCJEBv8v1ZKCN8BR5_pMYHT9YhLTWjv8xDZ7xb1Nej8qi6egfsI1mhJ7PwtTDo3pOUFKIeop_Clajov9Szr7Ad6G3FJYrA4M1DJ_qeQI" class="btn btn-outline-secondary btn-md" role="button" aria-pressed="true">User Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Navbar END-->
+
+  <img src="assets/img-csun-oviatt.jpg" class="img-responsive img-fluid" alt="Responsive Image">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="carousel-caption">
+          <div class="text-block text-light">
+              <h3>Student Academic Progress System</h3>
+          </div>
+      </div>
+    </div>
+  </div>
+<br><br>
+  <!-- <center><h2>CSUN Student Academic Progress System</h2></center>   -->
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <div class="img-scale" >
+            <center><img src="assets/semi-auto-256.png" class="img-responsive img-fluid d-none d-sm-block"></center>
+        </div>
+      <h4><center><b>Semi-Automated Processing</b></center></h4>
+      <center>Our system utilizes some of the latest technology to enable a semi-automated rule engine to help administrators and students save time and reduce revision errors.</center><br>
+    </div>
+    <div class="col-md-4">
+        <div class="img-scale">
+            <center><img src="assets/mail-new-256.png" class="img-responsive img-fluid d-none d-sm-block"></center>
+        </div>
+      <h4><center><b>Email Notifications</b></center></h4>
+      <center>From the second a request has been submitted, to when a decision has been made, our application will automatically notify students, letting them know what is going on with their request, every step of the way.</center><br>
+    </div>
+    <div class="col-md-4">
+        <div class="img-scale">
+            <center><img src="assets/centralized-requests-256.png" class="img-responsive img-fluid d-none d-sm-block"></center>
+        </div>
+      <h4><center><b>Centralized Requests</b></center></h4>
+      <center>From requesting permission numbers for courses to solidifying their major, our application centralizes all of these various requests into a single location that users can easily.</center><br>
+    </div>
+    </div>
+  </div>
+  <div class="container"><hr><br></div>
+
+  <!-- Photo Grid START -->
+  <div class="section-padding" id="photo-grid">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6" id="photo">
+            <img src="assets/photos/students-01.jpg" onclick="openModal();currenSlide(1)" class="dark-overlay wow fadeInLeft">
+          </div>
+          <div class="col-md-6" id="photo">
+            <img src="assets/photos/students-02.jpg" onclick="openModal();currenSlide(2)">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="photo">
+              <img src="assets/photos/students-03.jpg" onclick="openModal();currenSlide(3)">
+            </div>
+            <div class="col-md-6" id="photo">
+              <img src="assets/photos/students-04.jpg" onclick="openModal();currenSlide(4)">
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="container"><hr><br></div>
+
+  <!--Full Screen Image START-->
+  <div class="modal" id="my-modal">
+    <!--close button-->
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <!--Modal Content-->
+    <div class="modal-content">
+      <!--Modal images-->
+      <div class="my-slides">
+        <div class="number-text">1 / 4</div>
+        <img src="assets/photos/students-01.jpg" alt="student-1" class="landscape-img img-fluid">
+      </div>
+      <div class="my-slides">
+        <div class="number-text">2 / 4</div>
+        <img src="assets/photos/students-02.jpg" alt="student-2" class="landscape-img img-fluid">
+      </div>
+      <div class="my-slides">
+        <div class="number-text">3 / 4</div>
+        <img src="assets/photos/students-03.jpg" alt="student-3" class="landscape-img img-fluid">
+      </div>
+      <div class="my-slides">
+        <div class="number-text">4 / 4</div>
+        <img src="assets/photos/students-04.jpg" alt="student-4" class="landscape-img img-fluid">
+      </div>
+        <!--Navigation Buttons-->
+        <a class="prev" onclick="changeSlides(-1)">&#10094</a>
+        <a class="next" onclick="changeSlides(1)">&#10095</a>
+    </div>
+  </div>
+
+  <!--Photo Grid END-->
+
+    
+  <!-- <div class="container-fluid" style="padding-left:10em;">
+      <div class="row">
+        <div class="col-md-4">
+            <h6>Ways to go</h6>
+            <ul style="list-style-type: none; font-size: x-small">
+              <li>how things work</li>
+              <li>How I work</li>
+              <li>Why use CSUN Saps</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h6>Another texting test</h6>
+            <ul style="list-style-type: none; font-size: x-small">
+                <li>how things work</li>
+                <li>How I work</li>
+                <li>Why use CSUN Saps</li>
+              </ul>  
+        </div>
+        <div class="col-md-4">
+            <h6>Finally the last texting test</h6>
+            <ul style="list-style-type: none; font-size: x-small">
+                <li>how things work</li>
+                <li>How I work</li>
+                <li>Why use CSUN Saps</li>
+              </ul>
+        </div>
+      </div>
+  </div> -->
+
+        <!-- <img src="https://www.studymetro.com/static/uploads/training/bigstock-group-of-young-female-college--35520692_-_Copy.jpg" alt="Responsive Image" class="img-fluid"> -->
+      <!-- <div class="col-6">
+          <img src="http://usiaffinity.typepad.com/.a/6a01347fc1cb08970c015390c6a082970b-pi" alt="Responsive Image" class="img-fluid">
+      </div> -->
+
+  <!--FUNCIONALITY Scripts-->
+  <!-- <script type="text/javascript">
+    
+    function openModal(){
+        document.getElementById('my-modal').style.display = "inline-flex";
+    }
+    function closeModal(){
+      document.getElementById('my-modal').style.display = "none";
+    }
+
+    var slideIndexJS = 1;
+    showSlides( slideIndexJS );
+    
+    function changeSlides(n){
+      showSlides(slideIndexJS += n);
+    }
+
+    function currentSlide(n){
+      showSlides(slideIndexJS = n);
+    }
+
+    function showSlides(n){
+      var i;
+      var slidesJS = document.getElementsByClassName("my-slides");
+
+      if(n > slidesJS.length){ slideIndexJS = 1; }
+      if(n < 1 ){ slideIndexJS = slideJS.length; }
+
+      for(i = 0; i < slidesJS.length; i++){
+        slidesJS[i].style.display = "none";
+      }
+      slidesJS[slideIndexJS -1].style.display = "block";
+    }
+  </script> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript">new WOW().init();</script>
+  <!-- <script type="text/javascript" src="./js/photo-modal.js"></script> -->
+  <!-- <app-root></app-root> -->
 </body>
 </html>
